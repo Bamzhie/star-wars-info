@@ -7,7 +7,7 @@ const fetchPeople = async () => {
   return res.data;
 };
 
-const Planets = () => {
+const People = () => {
   const { data, status } = useQuery({
     queryKey: ["people"],
     queryFn: fetchPeople,
@@ -29,4 +29,4 @@ const Planets = () => {
   );
 };
 
-export default Planets;
+export default People;
