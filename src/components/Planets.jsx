@@ -2,7 +2,7 @@ import { useQuery } from "@tanstack/react-query";
 import Planet from "./Planet";
 import axios from "axios";
 
-const fetchPeople = async () => {
+const fetchPlanet = async () => {
   const res = await axios.get("https://swapi.dev/api/planets/");
   return res.data;
 };
@@ -10,7 +10,7 @@ const fetchPeople = async () => {
 const Planets = () => {
   const { data, status } = useQuery({
     queryKey: ["planet"],
-    queryFn: fetchPeople,
+    queryFn: fetchPlanet,
   });
   return (
     <div className="p-2">
